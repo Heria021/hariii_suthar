@@ -2,10 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { HiChip, HiSparkles, HiCode, HiDatabase, HiCube } from "react-icons/hi";
+import { HiChip, HiSparkles } from "react-icons/hi";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { config, Skill, SkillCategory } from "@/lib/config";
+import { getIconByName } from "@/app/(home)/components/icon-helpers";
 
 const getLevelPercentage = (level: string): number => {
   switch (level) {
@@ -111,7 +112,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ category }) => (
     <div className="flex items-center gap-3">
       <div className={cn("p-2.5 rounded-xl", category.bgClass)}>
         <div className={cn("w-5 h-5", category.iconClass)}>
-          {/* Icon name is stored as string, would need to render it separately */}
+          {getIconByName(category.iconName, "w-5 h-5")}
         </div>
       </div>
       <div>
