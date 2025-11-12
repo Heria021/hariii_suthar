@@ -224,6 +224,33 @@ export const config: Config = {
   ],
   experiences: [
     {
+      position: "SDE Intern",
+      company: "Tech Company",
+      period: "June 2025 - Present",
+      location: "Remote",
+      description:
+        "Currently working as a Software Development Engineer Intern, building scalable full-stack applications and contributing to core product development with modern technologies.",
+      responsibilities: [
+        "Developing and maintaining full-stack web applications using Next.js, React, and Node.js",
+        "Building RESTful APIs and integrating third-party services for enhanced functionality",
+        "Implementing AI-powered features using OpenAI APIs and RAG systems",
+        "Collaborating with cross-functional teams to deliver high-quality software solutions",
+        "Optimizing application performance and ensuring code quality through best practices",
+      ],
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "FastAPI",
+        "MongoDB",
+        "PostgreSQL",
+        "AWS",
+        "OpenAI APIs",
+        "Git/GitHub",
+      ],
+    },
+    {
       position: "AI Healthcare Systems Research Intern",
       company: "Centre of Excellence on AI for Education (CoE-AIE), JIIT",
       period: "May 2025 - June 2025",
