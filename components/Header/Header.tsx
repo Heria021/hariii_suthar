@@ -154,8 +154,9 @@ const ContactButton: React.FC<ContactButtonProps> = ({
           isMobile ? "w-full" : ""
         } rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 gap-2`}
       >
-        <FaExternalLinkAlt className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-black hidden sm:inline" />
+        <FaExternalLinkAlt className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black hidden sm:inline" />
         <span className="hidden sm:inline">Resume</span>
+        <FaExternalLinkAlt className="w-3.5 h-3.5 text-black sm:hidden" />
         <span className="sm:hidden">Resume</span>
       </Button>
     </a>
