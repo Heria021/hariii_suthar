@@ -18,21 +18,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => (
   <motion.div
     variants={itemAnimation}
-    className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 hover:bg-secondary/10 p-4 rounded-xl transition-colors duration-300"
+    className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 hover:bg-secondary/10 rounded-xl transition-colors duration-300"
   >
-    <div className="sm:w-1/3">
-      <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+    <div className="sm:w-1/3 flex-shrink-0">
+      <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-primary/10">
         <img
           src={project.image}
           alt={project.title}
           loading="lazy"
-          className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+          className="block w-full h-full min-w-full min-h-full object-contain transform-gpu group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
       </div>
     </div>
 
-    <div className="sm:w-2/3 flex flex-col justify-between py-2">
+    <div className="sm:w-2/3 flex flex-col justify-between p-4">
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-primary">
