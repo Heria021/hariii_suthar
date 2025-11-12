@@ -283,18 +283,23 @@ const GithubProjects: React.FC = () => {
     }
   );
 
+  // Debug logging
+  React.useEffect(() => {
+    console.log("GitHub API URL:", GITHUB_API_URL);
+    console.log("Data loaded:", data);
+    console.log("Error:", error);
+    console.log("Is Loading:", isLoading);
+  }, [data, error, isLoading]);
+
   const projects = useMemo(() => {
-    if (!data) return [];
+    if (!data || !Array.isArray(data)) {
+      console.log("Data is not available or not an array:", data);
+      return [];
+    }
     const filtered = data
       .filter(
         (project: GithubRepo) =>
-          !project.fork &&
-          !project.private &&
-          (project.name.toLowerCase().includes("portfolio") ||
-            (project.topics &&
-              project.topics.some((topic: string) =>
-                topic.toLowerCase().includes("portfolio")
-              )))
+          !project.private
       )
       .sort(
         (a: GithubRepo, b: GithubRepo) =>
@@ -302,6 +307,7 @@ const GithubProjects: React.FC = () => {
       )
       .slice(0, ITEMS_PER_PAGE * page);
 
+    console.log("Filtered projects:", filtered);
     return filtered.map((project: GithubRepo, index: number) => ({
       ...project,
       size: getProjectSize(index),
@@ -361,7 +367,8 @@ const GithubProjects: React.FC = () => {
             <motion.div
               variants={containerAnimation}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true }}
               className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 auto-rows-fr gap-3 sm:gap-4 w-full max-w-6xl mx-auto"
             >
               {isLoading ? (
@@ -374,7 +381,7 @@ const GithubProjects: React.FC = () => {
                   ))
               ) : error ? (
                 <ErrorAlert error={error} onRetry={handleRetry} />
-              ) : (
+              ) : projects && projects.length > 0 ? (
                 projects.map((project: any) => (
                   <ProjectCard
                     key={project.id}
@@ -382,6 +389,21 @@ const GithubProjects: React.FC = () => {
                     size={project.size}
                   />
                 ))
+              ) : (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-muted-foreground mb-4">
+                    No public repositories found. Data: {data ? `${data.length} repos` : "No data"}
+                  </p>
+                  <Button asChild>
+                    <a
+                      href={`https://github.com/${config.social.github}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit GitHub Profile
+                    </a>
+                  </Button>
+                </div>
               )}
             </motion.div>
 

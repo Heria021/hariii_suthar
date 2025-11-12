@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const NAV_ITEMS = config.NAV_ITEMS;
 
@@ -88,7 +89,7 @@ const Logo: React.FC<LogoProps> = ({ isMobile = false }) => (
         transition={{ delay: 0.2 }}
       >
         <span className="hidden sm:inline">
-          {config.developer.name} | Devxora
+          {config.developer.name}
         </span>
       </motion.span>
     </Link>
@@ -142,20 +143,22 @@ const ContactButton: React.FC<ContactButtonProps> = ({
     transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
     onClick={onLinkClick}
   >
-    <Link
-      href={"https://github.com/huzaifahmedz/Huzaif-Ahmed-portfolio-fourth"}
+    <a
+      href="/Hariom_Suthar_2025.pdf"
       target="_blank"
+      rel="noopener noreferrer"
       className={isMobile ? "w-full" : ""}
     >
       <Button
         className={`${
           isMobile ? "w-full" : ""
-        } rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3`}
+        } rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 gap-2`}
       >
-        <span className="hidden sm:inline">Repo Inside!</span>
-        <span className="sm:hidden">Template</span>
+        <FaExternalLinkAlt className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-black hidden sm:inline" />
+        <span className="hidden sm:inline">Resume</span>
+        <span className="sm:hidden">Resume</span>
       </Button>
-    </Link>
+    </a>
   </motion.div>
 );
 

@@ -8,16 +8,16 @@ import {
   FaNodeJs,
   FaGithub,
   FaAws,
+  FaDatabase,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiExpress,
   SiMongodb,
   SiTailwindcss,
-  SiFigma,
-  SiGreensock,
-  SiThreedotjs,
-  SiJavascript,
-  SiMaterialdesign,
+  SiTypescript,
+  SiNextdotjs,
+  SiLangchain,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 
@@ -29,13 +29,48 @@ interface Skill {
 
 const skills: Skill[] = [
   {
-    name: "AWS",
-    icon: <FaAws className="w-5 h-5 sm:w-6 sm:h-6" />,
+    name: "Next.js",
+    icon: <SiNextdotjs className="w-5 h-5 sm:w-6 sm:h-6" />,
     size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1",
   },
   {
     name: "React.js",
     icon: <FaReact className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-1 row-span-1",
+  },
+  {
+    name: "Convex",
+    icon: <FaDatabase className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-1 row-span-1",
+  },
+  {
+    name: "AWS",
+    icon: <FaAws className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1",
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1",
+  },
+  {
+    name: "Node.js",
+    icon: <FaNodeJs className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-1 row-span-1",
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-1 row-span-1",
+  },
+  {
+    name: "LangChain",
+    icon: <SiLangchain className="w-5 h-5 sm:w-6 sm:h-6" />,
+    size: "col-span-1 row-span-1",
+  },
+  {
+    name: "Python",
+    icon: <FaPython className="w-5 h-5 sm:w-6 sm:h-6" />,
     size: "col-span-1 row-span-1",
   },
   {
@@ -46,26 +81,6 @@ const skills: Skill[] = [
   {
     name: "MongoDB",
     icon: <SiMongodb className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1",
-  },
-  {
-    name: "Node.js",
-    icon: <FaNodeJs className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1",
-  },
-  {
-    name: "GitHub",
-    icon: <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-1 row-span-1",
-  },
-  {
-    name: "Tailwind",
-    icon: <SiTailwindcss className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-1 row-span-1",
-  },
-  {
-    name: "GSAP",
-    icon: <SiGreensock className="w-5 h-5 sm:w-6 sm:h-6" />,
     size: "col-span-1 row-span-1",
   },
   {
@@ -74,18 +89,8 @@ const skills: Skill[] = [
     size: "col-span-1 row-span-1",
   },
   {
-    name: "Three.js",
-    icon: <SiThreedotjs className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1",
-  },
-  {
-    name: "Figma",
-    icon: <SiFigma className="w-5 h-5 sm:w-6 sm:h-6" />,
-    size: "col-span-1 row-span-1",
-  },
-  {
-    name: "Material UI",
-    icon: <SiMaterialdesign className="w-5 h-5 sm:w-6 sm:h-6" />,
+    name: "GitHub",
+    icon: <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />,
     size: "col-span-1 row-span-1",
   },
 ];
