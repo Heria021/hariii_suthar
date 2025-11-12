@@ -80,7 +80,7 @@ export const config: Config = {
       title: "Sentinel v2.0",
       description:
         "AI chatbot platform reducing customer resolution time by 35% (12min → 7.8min) while processing 500+ daily queries with 92% first-contact resolution rate. Deployed 12 RESTful APIs serving 25+ enterprise clients with 99.5% uptime, enabling automated query resolution for 80% of common customer issues. Optimized LLM performance through advanced caching and model fine-tuning, achieving 2,500 queries/hour processing capacity.",
-      image: "/projects/sentinal.png",
+      image: "/projects/Sentinal_2.0v.png",
       technologies: [
         "Next.js",
         "TypeScript",
