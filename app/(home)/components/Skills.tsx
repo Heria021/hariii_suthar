@@ -55,7 +55,10 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill, bgClass }) => {
   const gradientClass: Record<string, string> = {
     "bg-blue-500/10": "from-blue-500/80 to-blue-500",
     "bg-emerald-500/10": "from-emerald-500/80 to-emerald-500",
+    "bg-purple-500/10": "from-purple-500/80 to-purple-500",
+    "bg-pink-500/10": "from-pink-500/80 to-pink-500",
     "bg-orange-500/10": "from-orange-500/80 to-orange-500",
+    "bg-cyan-500/10": "from-cyan-500/80 to-cyan-500",
   };
 
   const gradient = gradientClass[bgClass] || "from-primary/80 to-primary";

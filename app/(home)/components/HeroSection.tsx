@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
           <div className="space-y-4">
             <motion.h1
               variants={itemAnimation}
-              className="text-4xl md:text-7xl font-bold tracking-tight"
+              className="text-4xl md:text-7xl font-semibold tracking-normal"
             >
               <motion.span
                 variants={textAnimation}
