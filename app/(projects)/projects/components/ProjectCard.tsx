@@ -75,6 +75,21 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <FaExternalLinkAlt className="w-3 h-3" />
           </a>
         </Button>
+        <Button
+          size="sm"
+          className="rounded-full h-8 px-4 text-xs"
+          asChild
+        >
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+          >
+            GitHub
+            <FaExternalLinkAlt className="w-3 h-3" />
+          </a>
+        </Button>
       </div>
     </div>
   </motion.div>
