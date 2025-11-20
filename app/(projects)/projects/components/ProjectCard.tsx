@@ -33,9 +33,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       whileHover={{ y: -4 }} // smooth lift
       transition={{ duration: 0.25, ease: "easeOut" }}
       className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 rounded-xl 
-      hover:bg-secondary/10 hover:shadow-lg hover:shadow-primary/10 
-      border border-primary/10 transition-all duration-300"
+  hover:bg-secondary/10 hover:shadow-lg hover:shadow-primary/10 
+  border border-primary/10 transition-all duration-300"
     >
+
       <div className="sm:w-1/3 flex-shrink-0">
         <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-primary/10">
           <motion.div
@@ -120,3 +121,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     </motion.div>
   );
 };
+
+
+// <motion.div
+//   variants={itemAnimation}
+//   className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 hover:bg-secondary/10 rounded-xl transition-colors duration-300"
+// >
