@@ -100,7 +100,7 @@ export const config: Config = {
       title: "ChatPulse",
       description:
         "Real-time project dashboard managing 50+ architecture portfolios with automated PDF generation producing 200+ estimates monthly, reducing manual documentation time by 40%. Implemented secure role-based access control supporting 3 user tiers with 100% authentication success rate and zero unauthorized access incidents across 6-month production deployment.",
-      images: "/projects/chatpulse_v0.2.png",
+      images: "/projects/ChatPulse_v0.2.png",
       technologies: [
         "Next.js",
         "TypeScript",
