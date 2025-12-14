@@ -28,37 +28,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   }, [project.images]);
 
   return (
+
     <motion.div
       variants={itemAnimation}
-      whileHover={{ y: -4 }} // smooth lift
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 rounded-xl 
-  hover:bg-secondary/10 hover:shadow-lg hover:shadow-primary/10 
-  border border-primary/10 transition-all duration-300"
+      className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 hover:bg-secondary/10 rounded-xl transition-colors duration-300"
     >
-
-      <div className="sm:w-1/3 flex-shrink-0">
-        <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-primary/10">
-          <motion.div
-            className="flex h-full w-full"
-            animate={{ x: `-${currentIndex * 100}%` }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-          >
-            {project.images.map((img, idx) => (
-              <img
-                key={idx}
-                src={img}
-                alt={project.title}
-                className="block w-full h-full object-contain flex-shrink-0 pointer-events-none"
-              />
-            ))}
-          </motion.div>
-
+      <div className="sm:w-1/2 flex-shrink-0 p-4">
+        <div className="relative aspect-[5/3] rounded-lg overflow-hidden border border-primary/10 shadow-[0_0_20px_rgba(0,0,0,0.15)]">
+            <img
+              src={project.images}
+              alt={project.title}
+              className="block w-full h-full object-contain flex-shrink-0 pointer-events-none"
+            />
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
         </div>
       </div>
 
-      <div className="sm:w-2/3 flex flex-col justify-between p-4">
+      <div className="sm:w-1/2 flex flex-col justify-between p-4">
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold text-primary">
@@ -122,8 +108,3 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   );
 };
 
-
-// <motion.div
-//   variants={itemAnimation}
-//   className="group flex flex-col sm:flex-row items-stretch gap-6 bg-secondary/5 hover:bg-secondary/10 rounded-xl transition-colors duration-300"
-// >

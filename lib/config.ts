@@ -7,7 +7,7 @@ export interface Project {
   id: number;
   title: string;
   description: string;
-  images: string[];
+  images: string;
   technologies: string[];
   github: string;
   demo: string;
@@ -80,7 +80,7 @@ export const config: Config = {
       title: "Sentinel v2.0",
       description:
         "AI chatbot platform reducing customer resolution time by 35% (12min → 7.8min) while processing 500+ daily queries with 92% first-contact resolution rate. Deployed 12 RESTful APIs serving 25+ enterprise clients with 99.5% uptime, enabling automated query resolution for 80% of common customer issues. Optimized LLM performance through advanced caching and model fine-tuning, achieving 2,500 queries/hour processing capacity.",
-      images: ["/projects/Sentinal_2.0v.png"],
+      images: "/projects/Sentinal_v0.2.png",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -96,11 +96,30 @@ export const config: Config = {
       demo: "https://sentinal-v-2-0.vercel.app/",
     },
     {
+      id: 5,
+      title: "ChatPulse",
+      description:
+        "Real-time project dashboard managing 50+ architecture portfolios with automated PDF generation producing 200+ estimates monthly, reducing manual documentation time by 40%. Implemented secure role-based access control supporting 3 user tiers with 100% authentication success rate and zero unauthorized access incidents across 6-month production deployment.",
+      images: "/projects/chatpulse_v0.2.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Shadcn UI",
+        "Python",
+        "FastAPI",
+        "Firebase",
+        "Convex",
+        "Real-Time Data",
+      ],
+      github: "https://github.com/Heria021/chatnow",
+      demo: "https://www.chatpulse.in/",
+    },
+    {
       id: 6,
       title: "CodeShield – AI Code Security Scanner",
       description:
         "AI-powered code security platform that scans 50+ GitHub repositories/day, detecting OWASP vulnerabilities, hardcoded secrets, and insecure coding patterns. Generates detailed CVSS-based security reports in under 5 seconds and provides intelligent auto-fix recommendations using secure coding AI prompts.",
-      images: ["/projects/image.png"],
+      images: "/projects/codeshield_v0.2.png",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -120,7 +139,7 @@ export const config: Config = {
       title: "MedScribe 2.0 - AI Healthcare Platform",
       description:
         "AI healthcare platform processing 10,000+ medical documents daily with 95% transcription accuracy, reducing clinical documentation time by 60% across 10 specialized medical domains. Implemented HIPAA-compliant RAG system achieving sub-200ms response times and enabling semantic search across clinical databases with 98% query relevance scoring. Architected full-stack healthcare solution supporting 500+ concurrent users.",
-      images: ["/projects/MedScribe.png"],
+      images: "/projects/MedScribe.png",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -143,7 +162,7 @@ export const config: Config = {
       title: "NeuraMail – AI Email Assistant",
       description:
         "AI email assistant processing 1,000+ daily emails with 75% reduction in response time, serving 50+ business users through intelligent reply generation and contextual analysis. Achieved 92% email intent classification accuracy using hybrid RAG retrieval system, enabling automated handling of 300% higher email volume per user. Deployed AWS Cognito authentication system maintaining 99.9% uptime.",
-      images: ["/projects/NeuraMail.png"],
+      images: "/projects/NeuraMail.png",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -159,30 +178,11 @@ export const config: Config = {
       demo: "https://neuramail-chi.vercel.app/",
     },
     {
-      id: 5,
-      title: "ChatPulse",
-      description:
-        "Real-time project dashboard managing 50+ architecture portfolios with automated PDF generation producing 200+ estimates monthly, reducing manual documentation time by 40%. Implemented secure role-based access control supporting 3 user tiers with 100% authentication success rate and zero unauthorized access incidents across 6-month production deployment.",
-      images: ["/projects/chatpulse.png"],
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Shadcn UI",
-        "Python",
-        "FastAPI",
-        "Firebase",
-        "Convex",
-        "Real-Time Data",
-      ],
-      github: "https://github.com/Heria021/chatnow",
-      demo: "https://www.chatpulse.in/",
-    },
-    {
       id: 4,
       title: "Narayani Traders",
       description:
         "Real-time project dashboard managing 50+ architecture portfolios with automated PDF generation producing 200+ estimates monthly, reducing manual documentation time by 40%. Implemented secure role-based access control supporting 3 user tiers with 100% authentication success rate and zero unauthorized access incidents across 6-month production deployment.",
-      images: ["/projects/Narayni.png"],
+      images: "/projects/Narayni.png",
       technologies: [
         "Next.js",
         "TypeScript",
