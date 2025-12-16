@@ -139,7 +139,7 @@ export const config: Config = {
       title: "MedScribe 2.0 - AI Healthcare Platform",
       description:
         "AI healthcare platform processing 10,000+ medical documents daily with 95% transcription accuracy, reducing clinical documentation time by 60% across 10 specialized medical domains. Implemented HIPAA-compliant RAG system achieving sub-200ms response times and enabling semantic search across clinical databases with 98% query relevance scoring. Architected full-stack healthcare solution supporting 500+ concurrent users.",
-      images: "/projects/MedScribe.png",
+      images: "/projects/Medscribe_v0.2.png",
       technologies: [
         "Next.js",
         "TypeScript",
