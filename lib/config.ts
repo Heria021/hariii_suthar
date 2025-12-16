@@ -155,7 +155,7 @@ export const config: Config = {
         "HIPAA Compliance"
       ],
       github: "https://github.com/Heria021/medscribe_2.0.v",
-      demo: "https://github.com/Heria021/medscribe_2.0.v",
+      demo: "https://medscribe-2-0-v-git-vercel-react-e4d73b-hariom-suthars-projects.vercel.app/",
     },
     {
       id: 2,
